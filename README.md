@@ -2,7 +2,6 @@
 This repository is for testing RDF using information about Cliff Anderson.
 <rdf:RDF>
   @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-  @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
   @prefix foaf: <http://xmlns.com/foaf/0.1/> .
   @prefix dc11: <http://purl.org/dc/elements/1.1/> .
   @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
