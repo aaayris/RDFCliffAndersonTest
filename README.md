@@ -5,39 +5,28 @@ This repository is for testing RDF using information about Cliff Anderson.
   @prefix foaf: <http://xmlns.com/foaf/0.1/> .
   @prefix dc11: <http://purl.org/dc/elements/1.1/> .
   @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-  @prefix schmea: <http://schema.org/Person> .
+  @prefix schema: <http://schema.org/Person> .
   @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
-  <http://orcid.org/0000-0003-0328-0792> a rdf:Person ;
+  <http://orcid.org/0000-0003-0328-0792>
+    a rdf:Person ;
     foaf:name "Cliff Anderson" ;
-    dc:alternative "Clifford Blake Anderson" ;
-    schema:additionalName "Clifford Blake Anderson" ;
+    dc11:alternative "Clifford Blake Anderson" ;
+    schema:PersonadditionalName "Clifford Blake Anderson" ;
     foaf:title "Dr." ;
 
-# is using both dc:alternative and schema:additionalName a good idea?
-
-    schema:alumniOf <https://www.pratt.edu/the-institute/> ;
-      dc:educationalLevel: <https://en.wikipedia.org/wiki/Master_of_Library_and_Information_Science> ;
-      dc:date "2011-2012" ;
-    schema:alumniOf <http://www.ptsem.edu/> ;
-      dc:educationalLevel <https://en.wikipedia.org/wiki/Doctor_of_Philosophy> ;
-      dc:educationalLevel <https://en.wikipedia.org/wiki/Master_of_Theology> ;
-      dc:date "1996-2005" ;
-    schema:alumniOf <http://hds.harvard.edu/> ;
-      dc:educationalLevel <https://en.wikipedia.org/wiki/Master_of_Divinity> ;
-      dc:date "1992-1995" ;
-    schema:alumniOf <http://www.kenyon.edu/> ;
-      dc:educationalLevel <https://en.wikipedia.org/wiki/Bachelor_of_Arts> ;
-      dc:date "1988-1992"
-
-    schema:employee <http://vanderbilt.edu/> ;
-      geo:location [ geo:lat 36.144724 ; geo:long -86.802715 ] ;
-
-## is this a statement about the predicate i.e. the semicolon doesn't work?
-
-    schema:jobTitle "Director of Scholarly Communications" ;
-    schema:colleague <http://orcid.org/0000-0002-2174-0484> ;
-    foaf:knows <http://orcid.org/0000-0003-4365-3135> ;
+    schema:PersonalumniOf <https://www.pratt.edu/the-institute/> , <http://www.ptsem.edu/>, <http://hds.harvard.edu/>, <http://www.kenyon.edu/> ;
+    dc11:PersoneducationalLevel: <https://en.wikipedia.org/wiki/Master_of_Library_and_Information_Science> ;
+    dc11:date "2011-2012" , "1996-2005", "1992-1995", "1988-1992" ;
+    dc11:educationalLevel <https://en.wikipedia.org/wiki/Doctor_of_Philosophy> , <https://en.wikipedia.org/wiki/Master_of_Theology> , <https://en.wikipedia.org/wiki/Master_of_Divinity>, <https://en.wikipedia.org/wiki/Bachelor_of_Arts> ;
+    schema:Personemployee <http://vanderbilt.edu/> ;
+    geo:location [ 
+      geo:lat 36.144724 ;
+      geo:long -86.802715
+    ] ;
+    schema:PersonjobTitle "Director of Scholarly Communications" ;
+    schema:Personcolleague <http://orcid.org/0000-0002-2174-0484> ;
+    foaf:Personknows <http://orcid.org/0000-0003-4365-3135> ;
 
     foaf:page <http://www.library.vanderbilt.edu/scholarly/> ;
     foaf:page <https://www.hastac.org/u/clifford-anderson> ;
